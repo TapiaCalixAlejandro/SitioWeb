@@ -1,0 +1,39 @@
+<div class="">
+  <div class="d-flex justify-content-end">
+    <button class="btn btn-outline-primary btn-sm rounded-pill shadow-sm">Crear usuario</button>
+  </div>
+  <div class="card shadow-sm mt-4">
+    <div class="card-header">
+      Registros de usuarios
+    </div>
+    <div class="card-body" style="padding: 0px;">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Correo electrónico</th>
+            <th>Estatus</th>
+            <th class="text-center">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of users">
+            <td>{{item.username}}</td>
+            <td>{{item.email}}</td>
+            <td *ngIf="item.status==true">
+              <span class="badge bg-success">Activo</span>
+            </td>
+            <td *ngIf="item.status==false">
+              <span class="badge bg-danger">Inactivo</span>
+            </td>
+            <td class="text-center">
+              <button class="btn btn-light shadow-sm rounded-pill" style="margin-right: 8px;">Mostrar</button>
+              <button class="btn btn-light shadow-sm rounded-pill" style="margin-right: 8px;">Editar</button>
+              <button class="btn btn-light shadow-sm rounded-pill">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
