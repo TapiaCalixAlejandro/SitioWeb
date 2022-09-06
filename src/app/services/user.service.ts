@@ -8,8 +8,15 @@ import { User } from '../models/User';
 export class UserService {
 
   constructor(private http:HttpClient) { }
+
   url = 'http://localhost:7575/users/';
+
   getUsers() {
     return this.http.get<User[]>(this.url+'index');
   }
+
+  create(user:User) {
+    return this.http.post<User>(this.url,user);
+  }
+
 }
