@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/User';
 import { UserService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'app-create',
@@ -21,7 +22,8 @@ export class CreateComponent implements OnInit {
     this.service.create(user)
       .subscribe(data => {
         this.router.navigate(['/users']);
-        alert('Seagregó un nuevo registro de cliente!');
+        // alert('Seagregó un nuevo registro de cliente!');
+        swal('¡Acción exitosa!','Nuevo usuario creado con exito.','success');
       })
   }
 }
