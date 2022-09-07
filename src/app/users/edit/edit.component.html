@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <div class="card shadow-sm">
+    <div class="card-header">
+      Crear nuevo usuario
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col">
+          <label for="username">Nombre de usuario</label>
+          <input type="text" name="username" [(ngModel)]="user.username" id="username" placeholder="Nombre de usuario" 
+            class="form-control">
+        </div>
+        <div class="col">
+          <label for="email">Correo electrónico</label>
+          <input type="text" name="email" [(ngModel)]="user.email" id="email" placeholder="Correo electrónico"
+            class="form-control">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <div class="form-check form-switch">
+            <input class="form-check-input form-switch-lg" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+            [(ngModel)]="user.status" (change)="checkValue(user.status?'true':'false')" name="status">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Estatus de usuario</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer d-flex justify-content-end">
+      <button (click)="update(user)" class="btn btn-outline-success shadow-sm rounded-pill btn-sm" style="margin: 5px;">Guardar</button>
+      <button [routerLink]="['/users']" class="btn btn-outline-danger shadow-sm rounded-pill btn-sm" style="margin: 5px;">Cancelar</button>
+    </div>
+  </div>
+</div>

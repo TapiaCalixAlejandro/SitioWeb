@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { CreateComponent } from './users/create/create.component';
 import { ShowComponent } from './users/show/show.component';
+import { EditComponent } from './users/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ShowComponent } from './users/show/show.component';
     HeaderComponent,
     FooterComponent,
     CreateComponent,
-    ShowComponent
+    ShowComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

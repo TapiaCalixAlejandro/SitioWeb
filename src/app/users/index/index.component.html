@@ -28,8 +28,8 @@
             </td>
             <td class="text-center">
               <button (click)="show(item)" class="btn btn-light shadow-sm rounded-pill" style="margin-right: 8px;">Mostrar</button>
-              <button class="btn btn-light shadow-sm rounded-pill" style="margin-right: 8px;">Editar</button>
-              <button class="btn btn-light shadow-sm rounded-pill">Eliminar</button>
+              <button (click)="edit(item)" class="btn btn-light shadow-sm rounded-pill" style="margin-right: 8px;">Editar</button>
+              <button (click)="delete(item)" class="btn btn-light shadow-sm rounded-pill">Eliminar</button>
             </td>
           </tr>
         </tbody>
