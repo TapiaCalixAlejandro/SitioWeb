@@ -22,4 +22,8 @@ export class ShowComponent implements OnInit {
       })
   }
 
+  update(user:User) {
+    this.router.navigate(["users/edit",user]);
+  }
+
 }
