@@ -1,0 +1,18 @@
+<div class="card mt-4 shadow-sm">
+  <div class="card-header">
+    Detalle de usuario
+  </div>
+  <div class="card-body text-center mt-2">
+    <h5 class="card-title">Nombre de usuario: <small>{{user.username}}</small></h5>
+    <p class="card-text"><b>Correo electrónico: </b>{{user.email}}</p>
+    <p class="card-text"><b>Estatus: </b><small class="badge bg-success shadow-sm" *ngIf="user.status==true">Activo</small><small class="badge bg-danger shadow-sm" *ngIf="user.status==false">Inactivo</small></p>
+    <div class="">
+      <button class="btn btn-outline-primary btn-sm rounded-pill shadow-sm" style="margin-right: 8px;">
+        Modificar
+      </button>
+      <button class="btn btn-outline-danger btn-sm rounded-pill shadow-sm" [routerLink]="['/users']">
+        Regresar
+      </button>
+    </div>
+  </div>
+</div>

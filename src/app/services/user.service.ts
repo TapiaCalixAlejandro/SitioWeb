@@ -19,4 +19,8 @@ export class UserService {
     return this.http.post<User>(this.url,user);
   }
 
+  show(id:number) {
+    return this.http.get<User>(this.url+id);
+  }
+
 }

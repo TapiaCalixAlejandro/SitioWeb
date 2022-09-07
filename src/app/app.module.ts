@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { CreateComponent } from './users/create/create.component';
+import { ShowComponent } from './users/show/show.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CreateComponent } from './users/create/create.component';
     IndexComponent,
     HeaderComponent,
     FooterComponent,
-    CreateComponent
+    CreateComponent,
+    ShowComponent
   ],
   imports: [
     BrowserModule,
